@@ -23,14 +23,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MyAddressActivity" />
-        <activity android:name=".ShopActivity" />
-        <activity android:name=".OrdersActivity" />
-        <activity android:name=".MyCartActivity" />
-        <activity android:name=".AccountActivity" />
-        <activity android:name=".ContactUsActivity" />
-        <activity android:name=".LogoutActivity"></activity>
+        <activity android:name=".MyAddressActivity"
+                android:label="My Saved Addresses"
+                android:parentActivityName=".HomePageActivity"/>
+        <activity android:name=".ShopActivity"
+                android:label="Stores"
+            android:parentActivityName=".HomePageActivity"/>
+        <activity android:name=".OrdersActivity"
+                android:label="Recent Orders"
+            android:parentActivityName=".HomePageActivity"/>
+        <activity android:name=".MyCartActivity"
+                android:label="My Cart"
+            android:parentActivityName=".HomePageActivity"/>
+        <activity android:name=".AccountActivity"
+                android:label="My Account"
+            android:parentActivityName=".HomePageActivity"/>
+        <activity android:name=".ContactUsActivity"
+                android:label="Contact Us"/>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".HomePageActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.admin.supplyit_customer.HomePageActivity" />
+        </activity>
+        <activity android:name=".NavigateCategoryActivity"
+                    android:label="Select Category"
+            android:parentActivityName=".ShopActivity"></activity>
     </application>
 
 </manifest>

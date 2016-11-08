@@ -3,6 +3,7 @@ package com.example.admin.supplyit_customer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ShareCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,6 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.content.*;
 import android.view.MenuItem;
 
 public class HomePageActivity extends AppCompatActivity
@@ -81,20 +83,28 @@ public class HomePageActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_address) {
-            // Handle the camera action
+            Intent intent=new Intent(getApplicationContext(),MyAddressActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_login) {
+            Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_shops) {
-
-
+            Intent intent=new Intent(getApplicationContext(),ShopActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_orders) {
-
+            Intent intent=new Intent(getApplicationContext(),OrdersActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_cart) {
-
+            Intent intent=new Intent(getApplicationContext(),MyCartActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_account) {
-
+            Intent intent=new Intent(getApplicationContext(),AccountActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_contact) {
-
+            Intent intent=new Intent(getApplicationContext(),ContactUsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
